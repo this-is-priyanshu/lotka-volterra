@@ -1,0 +1,96 @@
+body {
+    background-color: skyblue;
+}
+
+#container {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    width: 200px;
+    font-size: medium;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#slider-container {
+    margin-top: 30px;
+    display: none;
+}
+
+#slider-container .form-group {
+    margin-bottom: 20px;
+}
+
+input[type="range"] {
+    width: 80%;
+    margin-top: 10px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: blue;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    background-color: darkblue;
+}
+
+span {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#graph {
+    margin-top: 40px;
+    width: 100%;
+    height: 400px;
+}

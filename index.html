@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Lotka-Volterra model</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Lotka-Volterra model</h1>
+        <hr>
+        <br>
+        <p>The Lotka-Volterra equations, also known as the predator-prey equations, are a pair of first-order non-linear differential equations.</p>
+        <p>The equations are often used to describe population dynamics between two species in a habitat, one being the predator and the other being the prey.</p>
+        <p>Prey equation: dx/dt = αx - βxy</p>
+        <p>Predator equation: dy/dt = δxy - γy</p>
+        <p>In the above equations, x is the prey population and y is the predator population.</p>
+        <p>dx/dt and dy/dt represent the rate of change of the prey and predator populations respectively.</p>
+        <p>α, β, δ, γ are positive real parameters which describe the interactions between the two species.</p>
+        <br>
+        <hr>
+        <form id="form">
+            <br>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="x0">Enter x<sub>0</sub> (initial prey population):</label>
+                    <input type="text" id="x0" name="x0" required>
+                </div>
+                <div class="form-group">
+                    <label for="y0">Enter y<sub>0</sub> (initial predator population):</label>
+                    <input type="text" id="y0" name="y0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="alpha">Enter α (growth rate of prey):</label>
+                    <input type="text" id="alpha" name="alpha" required>
+                </div>
+                <div class="form-group">
+                    <label for="beta">Enter β (death rate of prey):</label>
+                    <input type="text" id="beta" name="beta" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="delta">Enter δ (growth rate of predator):</label>
+                    <input type="text" id="delta" name="delta" required>
+                </div>
+                <div class="form-group">
+                    <label for="gamma">Enter γ (death rate of predator):</label>
+                    <input type="text" id="gamma" name="gamma" required>
+                </div>
+            </div>
+            <br>
+            <br>
+            <p style="color: red; font-weight: bold;">* Enter the default values x<sub>0</sub> = 10, y<sub>0</sub> = 10, α = 1.1, β = 0.4, δ = 0.1, γ = 0.4</p>
+            <br>
+            <button type="submit">Plot Graph</button>
+            <br>
+            <br>
+            <hr>
+        </form>
+        <div id="graph" style="display: none;"></div>
+        <div id="slider-container" style="display: none;">
+            <div class="form-group">
+                <label for="slider-x0">Adjust x<sub>0</sub> (initial prey population):</label>
+                <input type="range" id="slider-x0" min="1" max="100" value="10">
+                <span id="slider-x0-value">10</span>
+            </div>
+            <div class="form-group">
+                <label for="slider-y0">Adjust y<sub>0</sub> (initial predator population):</label>
+                <input type="range" id="slider-y0" min="1" max="100" value="10">
+                <span id="slider-y0-value">10</span>
+            </div>
+            <div class="form-group">
+                <label for="slider-alpha">Adjust α (growth rate of prey):</label>
+                <input type="range" id="slider-alpha" min="0.1" max="5" step="0.1" value="1.1">
+                <span id="slider-alpha-value">1.1</span>
+            </div>
+            <div class="form-group">
+                <label for="slider-beta">Adjust β (death rate of prey):</label>
+                <input type="range" id="slider-beta" min="0.1" max="5" step="0.1" value="0.4">
+                <span id="slider-beta-value">0.4</span>
+            </div>
+            <div class="form-group">
+                <label for="slider-delta">Adjust δ (growth rate of predator):</label>
+                <input type="range" id="slider-delta" min="0.1" max="5" step="0.1" value="0.1">
+                <span id="slider-delta-value">0.1</span>
+            </div>
+            <div class="form-group">
+                <label for="slider-gamma">Adjust γ (death rate of predator):</label>
+                <input type="range" id="slider-gamma" min="0.1" max="5" step="0.1" value="0.4">
+                <span id="slider-gamma-value">0.4</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
