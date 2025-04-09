@@ -45,7 +45,7 @@ function plotGraph(event) {
         x: result.time,
         y: result.prey,
         mode: 'lines',
-        name: 'Prey Population',
+        name: 'Prey',
         line: { color: 'blue' }
     };
 
@@ -53,7 +53,7 @@ function plotGraph(event) {
         x: result.time,
         y: result.predator,
         mode: 'lines',
-        name: 'Predator Population',
+        name: 'Predator',
         line: { color: 'red' }
     };
 
