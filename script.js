@@ -58,14 +58,14 @@ function plotGraph(event) {
     };
 
     const layout = {
-        title: 'Lotka-Volterra Model: Predator-Prey Population Over Time',
+        title: 'Lotka-Volterra Model',
         xaxis: { title: 'Time' },
         yaxis: { title: 'Population' }
     };
 
     document.getElementById('graph').style.display = 'block';
 
-    Plotly.newPlot('graph', [preyTrace, predatorTrace], layout);
+    Plotly.newPlot('graph', [preyTrace, predatorTrace], layout, { responsive: true });
 
     document.getElementById('slider-container').style.display = 'block';
     addSliderEventListeners();
@@ -98,14 +98,14 @@ function updateGraphFromSliders() {
     };
 
     const layout = {
-        title: 'Lotka-Volterra Model: Predator-Prey Population Over Time',
+        title: 'Lotka-Volterra Model',
         xaxis: { title: 'Time' },
         yaxis: { title: 'Population' }
     };
 
     document.getElementById('graph').style.display = 'block';
 
-    Plotly.react('graph', [preyTrace, predatorTrace], layout);
+    Plotly.react('graph', [preyTrace, predatorTrace], layout, { responsive : true });
 }
 
 function addSliderEventListeners() {
