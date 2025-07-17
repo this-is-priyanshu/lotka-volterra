@@ -1,4 +1,5 @@
 # Lotka-Volterra model
+### Site is now live at: https://this-is-priyanshu.github.io/lotka-volterra/
 This project implements the Lotka-Volterra model, also known as the predator-prey equations. The model simulates the interaction between two species in a habitat: one as prey and the other as a predator, illustrating the changes in population dynamics over a period of time.
 ### Features
 - Uses Runge-Kutta method of 4th order (RK4 method) to solve the system of equations
