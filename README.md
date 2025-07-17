@@ -5,7 +5,6 @@ This project implements the Lotka-Volterra model, also known as the predator-pre
 - Uses Runge-Kutta method of 4th order (RK4 method) to solve the system of equations
 - Real-time graph plotting of prey and predator populations over time
 - Sliders to dynamically adjust values of different constants and observe real-time changes
-###### Users are requested to input the default values as given on the page (since those are hardcoded by default). Values can be changed using sliders after the graph is plotted.
 ### Technologies Used
 - **HTML, CSS**: For the web interface
 - **JavaScript**: For implementing the numerical method to solve the system
